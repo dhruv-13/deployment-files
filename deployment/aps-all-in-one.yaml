@@ -136,7 +136,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: order-service
-          image: dhruv766/order-service:v1.0 # Custom image for order service
+          image: dhruv766/order-service:test # Custom image for order service
           ports:
             - containerPort: 3000 # Order service listens on this port
           env: # Environment variables for configuration
@@ -309,7 +309,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: product-service
-          image: dhruv766/product-service:v1.0 # Custom product service image
+          image: dhruv766/product-service:test # Custom product service image
           ports:
             - containerPort: 3002 # Product service listens on this port
           env: # Environment variables for configuration
@@ -370,7 +370,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: store-front
-          image: dhruv766/store-front:latest # Front-end store application
+          image: dhruv766/store-front:test # Front-end store application
           ports:
             - containerPort: 8080 # Front-end app port
               name: store-front
@@ -440,7 +440,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: store-admin
-          image: dhruv766/store-admin:latest # Admin interface for store
+          image: dhruv766/store-admin:test1 # Admin interface for store
           ports:
             - containerPort: 8081 # Admin app port
               name: store-admin
@@ -521,9 +521,9 @@ spec:
             - name: AZURE_OPENAI_DEPLOYMENT_NAME # required if using Azure OpenAI
               value: "gpt-4"
             - name: AZURE_OPENAI_ENDPOINT # required if using Azure OpenAI
-              value: "https://parm0-m4kcbd4z-eastus.cognitiveservices.azure.com/"
+              value: "https://parm0-m4lursnq-eastus.cognitiveservices.azure.com/"
             - name: AZURE_OPENAI_DALLE_ENDPOINT
-              value: "https://parm0-m4kcbd4z-eastus.cognitiveservices.azure.com/"
+              value: "https://parm0-m4lursnq-eastus.cognitiveservices.azure.com/"
             - name: AZURE_OPENAI_DALLE_DEPLOYMENT_NAME
               value: "dall-e-2"
             - name: OPENAI_API_KEY # always required
